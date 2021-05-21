@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: #fff;
-    font-family: "Poppins", sans-serif;
+    font-family: 'KoHo', sans-serif;
 }
 /* Navbar */
 nav {
@@ -27,7 +27,7 @@ nav img{
       align-items: center;
       justify-content: center;
       margin: 0px 5px;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.7);
       padding: 10px;
       text-decoration: none;
       border-radius: 20px;
@@ -38,7 +38,7 @@ nav img{
   margin-bottom: 5px;
 }
 .compte{
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.7);
       padding: 10px;
       text-decoration: none;
       border-radius: 20px;
@@ -96,6 +96,17 @@ nav img{
   align-items: center;
   width: 175px;
 }
+.sidebar{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 23vh;
+  top: 15vh;
+  background: rgba(255, 255, 255);
+  z-index: 10;
+}
 /* Container */
 
 .container {
@@ -119,14 +130,14 @@ nav img{
   
 .content {
     width: 100%;
-    background: rgb(92, 92, 92);
+    background: linear-gradient(129deg, rgba(116,175,131,1) 0%, rgba(190,236,156,1) 100%);
     min-height: 110vh;
     z-index: 2;
     position: absolute;
 }
 .container_slide{
   background:rgb(24, 24, 24);
-  margin-top: 270px;
+  margin-top: 230px;
   padding: 20px 0px;
   text-align: center;
 }
@@ -162,9 +173,19 @@ nav img{
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgba(92, 92, 92, 0.503);
 }
+.resize h3{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.titre-slider h2{
+  color: black;
+  font-size: 2.4em;
+  text-align: center;
+  padding-top: 25px;
+}
 .text-slide{
   background: rgb(24, 24, 24);
-  width: 180px;
+  width: 200px;
   height: 50px;
   border-radius: 20px 20px 0px 0px;
   display: flex;
@@ -172,5 +193,297 @@ nav img{
   justify-content: center;
   position: absolute;
   left: 100px;
-  top: 220px;
+  top: 255px;
+  font-size: 1.1em;
+}
+.button_carte button{
+  background: rgb(24, 24, 24);
+  position: absolute;
+  left:50%;
+  bottom: 200px;
+  transform: translateX(-50%);
+  width: auto;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.503);
+}
+.button_carte button a{
+  text-decoration: none;
+}
+.button_carte button:hover{
+  background: #34541c;
+  color: black;
+  font-weight: bold;
+}
+.content-twitter{
+    width: 100%;
+    height: 110vh;
+    position: absolute;
+    z-index: 3;
+    background-image: url(./img/fondpokemon.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding: 30px 20px; 
+}
+.content-twitter h2{
+  text-align: center;
+  color: black;
+  font-size: 2em;
+}
+
+.connexion{
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 500px;
+  height: 350px;
+  border-radius: 50px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  left:50%;
+  top: 32%;
+  z-index: 5;
+  transform: translateX(-50%);
+}
+.connexion-active{
+  display: flex;
+}
+.connexion p{
+  font-size: 2em;
+  padding: 20px 20px 40px 20px;
+}
+form div{
+  padding: 20px;
+  font-size: 1.2em;
+}
+form input{
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  height: 30px;
+  color: rgb(49, 49, 49);
+  font-size: 15px;
+}
+#connexion{
+  border: none;
+  background: #EF5B5B;
+  width: 130px;
+  height: 40px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+/* Footer */
+.container-footer-CD{
+  background: #343333;
+  padding: 10px;
+  z-index: 15;
+  position: relative;
+}
+
+.mention-CD a{
+  text-decoration: none;
+  color: white;
+}
+.mention-CD a span{
+  padding: 0px 10px;
+}
+
+.social-network-CD{
+  margin: 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-network-CD svg{
+  margin-right: 15px;
+}
+
+.bas-footer-CD{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom : -20px;
+}
+
+.google-avis-CD{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-google-CD{
+  width: 35px;
+  height: auto;
+}
+
+.copyright-CD{
+  color: white;
+  text-align: center;
+}
+
+.partenaire-CD{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partenaire-CD img{
+  margin-right: 10px;
+}
+.micromania-CD{
+  width: 100px;
+  height: auto;
+}
+.steam-CD{
+  width: 80px;
+  height: auto;
+}
+.twitch-CD{
+  width: 70px;
+  height: auto;
+}
+/* Media queries */
+@media screen and (max-width: 900px) {
+  .bas-footer-CD{
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .partenaire-CD{
+      flex-wrap: wrap;
+  }
+
+  .partenaire-CD img{
+      margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .burger{
+    display: block;
+  }
+  .liens{
+    display: none;
+  }
+  .active{
+    display: flex;
+  }
+  /* .sidebar{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 23vh;
+    top: 15vh;
+    background: rgba(255, 255, 255);
+    z-index: 10;
+  } */
+  .sidebar p{
+    color: black;
+    font-size: 20px;
+    padding: 15px 0px;
+    text-align: center;
+  }
+  .sidebar p span{
+    color: black;
+  }
+  .accueil{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .accueil:hover{
+    background: #20A39E;
+  }
+  .collection{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .collection:hover{
+    background: #FFBA49;
+  }
+  .contact{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .contact:hover{
+    background: #EF5B5B;
+  }
+  iframe{
+    width: 450px !important;
+  }
+}
+@media screen and (max-width: 1588px) {
+  iframe{
+    position: absolute !important;
+    top: 150px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+@media screen and (max-width: 485px) {
+  iframe{
+    width: 350px !important;
+  }
+  .content-twitter{
+    padding: 30px 5px;
+  }
+  .pokemon{
+    right: 0%;
+  }
+  .main-title{
+    font-size: 4rem;
+  }
+  nav{
+    flex-direction: column;
+  }
+  .compte_burger{
+    margin-top: 25px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .rond{
+    right: 0;
+    left: 107px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .main-title{
+    font-size: 3rem;
+  }
+  .text-slide{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .button_carte button{
+    bottom: 150px;
+  }
 }
