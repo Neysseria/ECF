@@ -12,7 +12,7 @@
     <title>Poukemoon</title>
 </head>
 <body>
-    <section>
+    <!-- <section> -->
         <!-- Navbar -->
         <nav>
             <!-- Logo -->
@@ -78,6 +78,7 @@
                 <button id="connexion">Connexion</button>
             </div>
         </div>
+        <section>
         <!-- Images parallax -->
         <div class="container">
             <h1 class="main-title">Découvre.</h1>
@@ -158,7 +159,7 @@
         <!-- API Twitter -->
         <div class="content-twitter">
             <h2>Suivre les actualités Twitter</h2>
-            <a class="twitter-timeline twitter" data-lang="fr" data-width="550" data-height="850" data-theme="dark" href="https://twitter.com/PokemonFR?ref_src=twsrc%5Etfw">Tweets by PokemonFR</a> 
+            <a class="twitter-timeline twitter" data-lang="fr" data-width="550" data-height="680" data-theme="light" href="https://twitter.com/PokemonFR?ref_src=twsrc%5Etfw">Tweets by PokemonFR</a> 
         </div>
     </section>
     <!-- Footer -->
@@ -251,6 +252,19 @@
                 }
             }
         } ).mount(); 
+        // Sticky header
+        window.onscroll = function() {myFunction()};
+                
+                var header = document.querySelector("nav");
+                var sticky = header.offsetTop;
+                
+                function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+                }   
     </script>
 </body>
 </html>

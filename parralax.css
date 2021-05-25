@@ -12,6 +12,7 @@ nav {
     display: flex;
     padding: 3rem 3rem;
     justify-content: space-between;
+    z-index: 2;
 }
 .liens{
   display: flex;
@@ -20,6 +21,12 @@ nav {
 nav img{
     width: 150px;
     height: auto;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 .button{
       display: flex;
@@ -76,7 +83,7 @@ nav img{
     width: 25px;
     height: 3px;
     border-radius: 50px;
-    background-color: #ffffff;
+    background-color: #EF5B5B;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -100,11 +107,11 @@ nav img{
   display: none;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 23vh;
   top: 15vh;
-  background: rgba(255, 255, 255);
+  background: rgba(195, 195, 195, 0.767);
   z-index: 10;
 }
 /* Container */
@@ -130,14 +137,18 @@ nav img{
   
 .content {
     width: 100%;
-    background: linear-gradient(129deg, rgba(116,175,131,1) 0%, rgba(190,236,156,1) 100%);
+    /* background: linear-gradient(129deg, rgba(116,175,131,1) 0%, rgba(190,236,156,1) 100%); */
     min-height: 110vh;
     z-index: 2;
     position: absolute;
+    background: url(https://i.pinimg.com/originals/26/d8/6c/26d86c78c116c7fecf5fbc2d1ba5e7b7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .container_slide{
   background:rgb(24, 24, 24);
-  margin-top: 230px;
+  margin-top: 105px;
   padding: 20px 0px;
   text-align: center;
 }
@@ -181,7 +192,7 @@ nav img{
   color: black;
   font-size: 2.4em;
   text-align: center;
-  padding-top: 25px;
+  margin-top: 150px;
 }
 .text-slide{
   background: rgb(24, 24, 24);
@@ -194,7 +205,7 @@ nav img{
   position: absolute;
   left: 100px;
   top: 255px;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 .button_carte button{
   background: rgb(24, 24, 24);
@@ -218,13 +229,13 @@ nav img{
   text-decoration: none;
 }
 .button_carte button:hover{
-  background: #34541c;
+  background: #E4959E;
   color: black;
   font-weight: bold;
 }
 .content-twitter{
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     position: absolute;
     z-index: 3;
     background-image: url(./img/fondpokemon.jpg);
@@ -236,12 +247,13 @@ nav img{
 .content-twitter h2{
   text-align: center;
   color: black;
-  font-size: 2em;
+  font-size: 2.4em;
+  margin-top: 120px;
 }
 
 .connexion{
   background: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   width: 500px;
   height: 350px;
   border-radius: 50px;
@@ -444,14 +456,18 @@ form input{
 @media screen and (max-width: 1588px) {
   iframe{
     position: absolute !important;
-    top: 150px !important;
+    top: 250px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+  }
+  .content-twitter{
+    height: 120vh;
   }
 }
 @media screen and (max-width: 485px) {
   iframe{
     width: 350px !important;
+    top: 280px !important;
   }
   .content-twitter{
     padding: 30px 5px;

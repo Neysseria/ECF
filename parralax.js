@@ -10,7 +10,7 @@ timeline // Animations dans le temps
 
 let scene = new ScrollMagic.Scene({
     triggerElement : "section", // Element à sélectionner
-    duration: "150%", // Vitesse du scroll
+    duration: "300%", // Vitesse du scroll
     triggerHook: 0,
 })
 
@@ -33,7 +33,7 @@ let connexionMenu = function(){
     connexion.addEventListener("click", function(){
         connexionSidebar.classList.toggle("connexion-active");
         Seconnecter.addEventListener("click", function(){
-            rond.style.background = "green";
+            rond.style.background = "#51CB20";
             connexionSidebar.classList.toggle("connexion-active");
             nomPseudo.innerHTML = pseudo.value;
         })  
